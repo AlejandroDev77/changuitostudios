@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Outfit", sans-serif;
+  --color-paper: #fdfaf3;
+  --color-margin: #ff8b8b;
+  --color-line: #e2e8f0;
+}
+
+@layer utilities {
+  .bg-notebook-lines {
+    background-image: linear-gradient(var(--color-line) 1px, transparent 1px);
+    background-size: 100% 2.5rem;
+  }
+
+  .notebook-margin {
+    border-left: 2px solid var(--color-margin);
+    margin-left: 4rem;
+    padding-left: 2rem;
+  }
+
+  /* Custom markdown styling inside the notebook */
+  .prose-notebook h1 {
+    @apply text-3xl font-serif font-bold text-gray-800 mb-6;
+  }
+  .prose-notebook h2 {
+    @apply text-2xl font-serif font-semibold text-gray-700 mt-8 mb-4 border-b border-gray-200 pb-2;
+  }
+  .prose-notebook h3 {
+    @apply text-xl font-semibold text-gray-600 mt-6 mb-3 italic;
+  }
+  .prose-notebook p {
+    @apply text-lg text-gray-800 leading-[2.5rem] mb-4;
+  }
+  .prose-notebook ul {
+    @apply list-disc list-outside mb-4 space-y-2;
+  }
+  .prose-notebook li {
+    @apply text-lg text-gray-800 leading-[2.5rem] ml-6;
+  }
+  .prose-notebook blockquote {
+    @apply border-l-4 border-indigo-400 bg-indigo-50/50 p-4 my-6 italic rounded-r-lg;
+  }
+}
+
+body {
+  @apply bg-[#f2f2f2] font-sans text-gray-900;
+}
