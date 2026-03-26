@@ -70,7 +70,7 @@ export default function App() {
       <div className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-gray-200 z-40 flex items-center justify-between px-6">
         <div className="flex items-center gap-2">
           <Book className="text-indigo-600 w-6 h-6" />
-          <span className="font-serif font-bold text-xl uppercase tracking-tighter">ChanguitoStudio</span>
+          <span className="font-serif font-bold text-xl uppercase tracking-tighter">Apuntes</span>
         </div>
         <button onClick={toggleSidebar} className="p-2 rounded-lg hover:bg-gray-100">
           {isSidebarOpen ? <X /> : <Menu />}
